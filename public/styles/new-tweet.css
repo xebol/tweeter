@@ -1,0 +1,22 @@
+form {
+  padding-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+button {
+  justify-content: flex-start;
+  font-family: Bungee;
+  color: #FFFFFF;
+  background-color: #4056A1;
+}
+output {
+  font-family: Bungee;
+}
+
+label {
+  font-size: 30px;
+}
