@@ -1,10 +1,15 @@
+.text-area-container textarea {
+  width: 100%;
+  border-bottom: 5px solid #3a3939;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: transparent;
+}
+
 form {
   padding-top: 20px;
   margin: 0 auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row; */
 }
 
 button {
@@ -13,6 +18,7 @@ button {
   color: #FFFFFF;
   background-color: #4056A1;
 }
+
 output {
   font-family: Bungee;
 }
@@ -24,13 +30,11 @@ label {
 #tweet-text {
   resize: none;
   width: 100%;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #4c4a4a;
   border-left: 0;
   border-right: 0;
   border-top: 0;
   background-color: transparent;
-  font-size: 24px;
-  outline: none;
 }
 
 .tweet-character {
@@ -40,4 +44,43 @@ label {
 
 .red-text {
   color: red;
+}
+
+article.tweet {
+  border: 5px solid #4c4a4a;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px #b0bef2;
+}
+
+article.tweet header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: .2 em;
+  border-top: 5px solid #4c4a4a;
+  flex-direction: row;
+}
+
+.tweet-container {
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: transparent;
+}
+
+.icons:hover {
+  color: rgb(217, 175, 9);
 }
