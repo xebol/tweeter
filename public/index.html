@@ -36,11 +36,14 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-
   <!-- Composer Character Counter JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <!-- Timeago Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
 
 </head>
 
@@ -49,7 +52,6 @@
   <nav>
     <span class="logo">Tweeter</span>
     <p>Write a new tweet! <i class="fa-solid fa-angles-down" id="double-arrow"></i></p>
-
   </nav>
 
   <header class="header">
@@ -62,19 +64,18 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form method="POST" action="/tweets/">
+      <form id="new-tweet-form" action="">
         <div>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         </div>
         <div class="tweet-character">
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output name="counter" class="counter" for="tweet-text" id="character">140</output>
         </div>
       </form>
     </section>
 
-    <section id="tweets-container">
-    </section>
+    <section id="tweets-container"></section>
 
   </main>
 </body>

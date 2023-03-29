@@ -1,3 +1,5 @@
+// const { post } = require("request");
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -28,6 +30,7 @@ $(document).ready(function() {
         "text": "I think; therefore I am"
       },
       "created_at": 1461113959088
+
     }
   ];
 
@@ -44,7 +47,7 @@ $(document).ready(function() {
   </header>
   <p>${tweet.content.text}</p>
   <footer>
-    <p>${tweet.created_at}</p>
+    <p>${timeago.format(tweet.created_at)}</p>
     <div>
       <i class="fa-solid fa-flag icons"></i>
       <i class="fa-solid fa-retweet icons"></i>
@@ -66,6 +69,43 @@ $(document).ready(function() {
       $('#tweets-container').append($tweet);
     }
   };
-  renderTweets(data);
+
+  const loadTweets = function() {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets'
+    }).then((tweets) => { //if no success property it will return a promise
+      console.log(tweets); //console log the response
+      renderTweets(tweets);
+    });
+
+    //access the tweets-container in the DOM to be able to access the tweets
+    const $tweetsContainer = $('#tweets-container');
+
+    // //resets the tweets container to it's original state without duplicating the original tweets
+    $tweetsContainer.empty();
+  };
+  loadTweets();
+
+  //grab the form and store it as a variable using JQuery implementation
+  const $form = $('#new-tweet-form');
+
+  //add submit handler to the form to submit new tweets
+  $form.on('submit', function(event) {
+    //prevents the default behaviour 'refresh' of the browser
+    event.preventDefault();
+    //serialize the data
+    const urlEncoded = $form.serialize();
+    console.log(urlEncoded);
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: urlEncoded
+    }).then(() => {
+      loadTweets();
+      $('#tweet-text').val('');
+      $('#character').val(140);
+    });
+  });
 });
 

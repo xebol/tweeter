@@ -1,3 +1,4 @@
+//character counter back-end
 $(document).ready(function() {
   $('#tweet-text').on('input', function(e) {
     const character = e.target.value.length;
