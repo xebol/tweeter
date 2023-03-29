@@ -29,6 +29,7 @@ label {
 
 #tweet-text {
   resize: none;
+  outline: none;
   width: 100%;
   border-bottom: 5px solid #4c4a4a;
   border-left: 0;
@@ -40,6 +41,7 @@ label {
 .tweet-character {
   display: flex;
   justify-content: space-between;
+
 }
 
 .red-text {
@@ -73,7 +75,7 @@ article.tweet footer {
   flex-direction: row;
 }
 
-.tweet-container {
+#tweets-container {
   width: 100%;
   border-left: 0;
   border-right: 0;
@@ -83,4 +85,9 @@ article.tweet footer {
 
 .icons:hover {
   color: rgb(217, 175, 9);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
 }
