@@ -14,3 +14,11 @@ header {
 header h2 {
   margin-top: -5px;
 }
+
+#double-arrow {
+  display: flex;
+  flex-direction: column;
+  color: brown;
+  align-items: center;
+  padding-top: 5px;
+}
