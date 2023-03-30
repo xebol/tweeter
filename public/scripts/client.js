@@ -3,7 +3,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const data = [
     {
@@ -43,7 +50,7 @@ $(document).ready(function() {
     </div>
     <p> ${tweet.user.handle}</p>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
     <p>${timeago.format(tweet.created_at)}</p>
     <div>
@@ -70,7 +77,7 @@ $(document).ready(function() {
 
       //resets the tweets container to it's original state without duplicating the original tweets
       $tweetsContainer.empty();
-      
+
       renderTweets(tweets);
     });
 
@@ -96,13 +103,14 @@ $(document).ready(function() {
   $form.on('submit', (event) => {
     //prevents the default behaviour 'refresh' of the browser
     event.preventDefault();
-    console.log('Hello, world');
-
     const tweetinput = $('#tweet-text');
     if (tweetinput.val().length > 140) {
-      alert('Character Limit Over');
+      $('.error').slideDown(500);
       return;
+    } else {
+      $('.error').slideUp(500);
     }
+
     //serialize the data
     const urlEncoded = $form.serialize();
 
