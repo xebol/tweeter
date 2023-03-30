@@ -7,7 +7,7 @@ nav {
   position: fixed;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  width: 100%;
+  width: 100vw;
   font-family: Source Sans Pro;
   height: 120px;
   color: #FFFFFF;
