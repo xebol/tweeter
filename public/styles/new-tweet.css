@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .text-area-container textarea {
   width: 100%;
   border-bottom: 5px solid #3a3939;

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
   /* 140, 196, 246 */
   height: 457px;
