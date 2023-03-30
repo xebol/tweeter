@@ -8,7 +8,7 @@ $(document).ready(function() {
     if (remainingCharacter < 0) {
       counter.addClass('red-text');
     } else {
-      counter.removeClass('red-text');
+      counter.removeClass('red-text')
     }
   });
 });

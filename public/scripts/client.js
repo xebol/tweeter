@@ -1,5 +1,3 @@
-// const { post } = require("request");
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -60,15 +58,8 @@ $(document).ready(function() {
 
   };
 
-  const renderTweets = function(tweets) {
-    // loops through tweets
-    for (const content of tweets) {
-      // calls createTweetElement for each tweet
-      let $tweet = createTweetElement(content);
-      // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
-    }
-  };
+  //access the tweets-container in the DOM to be able to access the tweets
+  const $tweetsContainer = $('#tweets-container');
 
   const loadTweets = function() {
     $.ajax({
@@ -76,35 +67,54 @@ $(document).ready(function() {
       url: '/tweets'
     }).then((tweets) => { //if no success property it will return a promise
       console.log(tweets); //console log the response
+
+      //resets the tweets container to it's original state without duplicating the original tweets
+      $tweetsContainer.empty();
+      
       renderTweets(tweets);
     });
 
-    //access the tweets-container in the DOM to be able to access the tweets
-    const $tweetsContainer = $('#tweets-container');
 
-    // //resets the tweets container to it's original state without duplicating the original tweets
-    $tweetsContainer.empty();
+    const renderTweets = function(tweets) {
+      // loops through tweets
+      for (const content of tweets) {
+        // calls createTweetElement for each tweet
+        let $tweet = createTweetElement(content);
+        // takes return value and appends it to the tweets container
+        $('#tweets-container').prepend($tweet);
+      }
+    };
   };
+
+  //load the tweets on the initial refresh
   loadTweets();
 
   //grab the form and store it as a variable using JQuery implementation
   const $form = $('#new-tweet-form');
 
   //add submit handler to the form to submit new tweets
-  $form.on('submit', function(event) {
+  $form.on('submit', (event) => {
     //prevents the default behaviour 'refresh' of the browser
     event.preventDefault();
+    console.log('Hello, world');
+
+    const tweetinput = $('#tweet-text');
+    if (tweetinput.val().length > 140) {
+      alert('Character Limit Over');
+      return;
+    }
     //serialize the data
     const urlEncoded = $form.serialize();
-    console.log(urlEncoded);
+
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: urlEncoded
-    }).then(() => {
-      loadTweets();
+    }).then((newTweet) => {
+      console.log(newTweet);
       $('#tweet-text').val('');
       $('#character').val(140);
+      loadTweets();
     });
   });
 });
