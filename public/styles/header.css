@@ -3,10 +3,10 @@
 }
 
 .header {
-  /* 140, 196, 246 */
   height: 457px;
   padding-top: 120px;
   width: 100%;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,3 +27,32 @@ header h2 {
   padding-top: 5px;
 }
 
+/* tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 457px;
+    padding-top: 120px;
+    width: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(140, 196, 246);
+  }
+
+  header h2 {
+    margin-top: -5px;
+  }
+}
+
+/* desktop screen */
+@media only screen and (min-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    width: 50%;
+    height: 50%;
+  }
+}
