@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["This is the page that will be rendered if the user is using a smaller device such as tablets or ipads."](https://github.com/xebol/tweeter/blob/master/docs/Screenshot%202023-03-30%20at%207.55.33%20PM.png?raw=true)
+!["This is the page that will be rendered if the user is using a smaller device such as tablets or ipads."](https://github.com/xebol/tweeter/blob/master/docs/Screenshot%202023-03-30%20at%207.55.33%20PM.png?raw=true "")
 !["This is the page that a user will see if they are are using the app on a desktop"](https://github.com/xebol/tweeter/blob/master/docs/Screenshot%202023-03-30%20at%207.55.05%20PM.png?raw=true)
 !["If a user tried to send out a tweet that is more than 140 character an error message will appear and the form will not submit or refresh"](https://github.com/xebol/tweeter/blob/master/docs/Screenshot%202023-03-30%20at%207.56.26%20PM.png?raw=true)
 !["When the user change the tweet and it is within the character limit, the error will go away and let the user send the tweet which will be rendered without refreshing the page"](https://github.com/xebol/tweeter/blob/master/docs/Screenshot%202023-03-30%20at%207.57.11%20PM.png?raw=true)
