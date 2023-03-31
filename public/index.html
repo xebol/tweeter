@@ -53,33 +53,33 @@
     <p>Write a new tweet! <i class="fa-solid fa-angles-down" id="double-arrow"></i></p>
   </nav>
 
- <div class="body-container">
-  <header class="header">
-    <div id="img">
-      <img src="/images/profile-hex.png">
-    </div>
-    <h2>Snowy Pea</h2>
-  </header>
+  <div class="body-container">
+    <header class="header">
+      <div id="img">
+        <img src="/images/profile-hex.png">
+      </div>
+      <h2>Snowy Pea</h2>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form id="new-tweet-form" action="">
-        <div class="error" style="display: none;">
-          Character limit exceeded!
-        </div>
-        <div>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        </div>
-        <div class="tweet-character">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text" id="character">140</output>
-        </div>
-      </form>
-    </section>
-    <section id="tweets-container"></section>
-  </main>
- </div>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <form id="new-tweet-form" action="">
+          <div class="error" style="display: none;">
+            Character limit exceeded!
+          </div>
+          <div>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          </div>
+          <div class="tweet-character">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="character">140</output>
+          </div>
+        </form>
+      </section>
+      <section id="tweets-container"></section>
+    </main>
+  </div>
 </body>
 
 </html>
