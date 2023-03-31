@@ -46,16 +46,22 @@ main {
     padding-top: 10em;
     background-color: mintcream;
   }
+
   .header {
     width: 80%;
   }
+
   .container {
     margin: 90px;
+    margin-top: 0px;
+    margin-left: 150px;
     background-color: mintcream;
   }
+
   body {
     background-color: mintcream;
   }
+
   article.tweet {
     background-color: mintcream;
   }
