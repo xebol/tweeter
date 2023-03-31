@@ -21,3 +21,9 @@ nav span {
   align-items: center;
   font-family: Bungee;
 }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #065241;
+  }
+}

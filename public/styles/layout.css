@@ -19,7 +19,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #e8f1f4;
   font-family: Source Sans Pro;
   font-size: 24px;
 }
@@ -31,7 +31,7 @@ main {
   width: 90%;
   margin: 0 auto;
   align-items: center;
-  background-color: #f4f1ec;
+  background-color: #e8f1f4;
   font-size: 16;
 }
 
@@ -44,12 +44,19 @@ main {
     width: 90%;
     margin: 0 auto;
     padding-top: 10em;
+    background-color: mintcream;
   }
   .header {
     width: 80%;
   }
-/* 
   .container {
     margin: 90px;
-  } */
+    background-color: mintcream;
+  }
+  body {
+    background-color: mintcream;
+  }
+  article.tweet {
+    background-color: mintcream;
+  }
 }

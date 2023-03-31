@@ -108,3 +108,10 @@ article.tweet footer {
   box-shadow: 5px 5px 5px #aaaaaa;
   margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 1024px){
+  button {
+    color: #FFFFFF;
+    background-color: #065241;
+  }
+}
