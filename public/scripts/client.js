@@ -13,33 +13,6 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "I think; therefore I am"
-      },
-      "created_at": 1461113959088
-
-    }
-  ];
-
   const createTweetElement = function(tweet) {
     //construct a new element using JQuery with $ function
     const $tweet = $(`    
@@ -94,7 +67,6 @@ $(document).ready(function() {
     };
   };
 
-  //load the tweets on the initial refresh
   loadTweets();
 
   //grab the form and store it as a variable using JQuery implementation
@@ -105,12 +77,22 @@ $(document).ready(function() {
     //prevents the default behaviour 'refresh' of the browser
     event.preventDefault();
     const tweetinput = $('#tweet-text');
+    //if tweet is over the limit
     if (tweetinput.val().length > 140) {
       $('.error').slideDown(500);
       return;
     } else {
       $('.error').slideUp(500);
     }
+    
+    //if tweet is empty
+    if (tweetinput.val().length === 0) {
+      $('#empty-error').slideDown(500);
+      return;
+    } else {
+      $('#empty-error').slideUp(500);
+    }
+
 
     //serialize the data
     const urlEncoded = $form.serialize();
@@ -125,6 +107,7 @@ $(document).ready(function() {
       $('#character').val(140);
       loadTweets();
     });
+    
   });
 });
 
