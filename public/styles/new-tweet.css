@@ -68,7 +68,7 @@ article.tweet header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 }
 
 article.tweet footer {
@@ -124,7 +124,7 @@ article.tweet footer {
 @media only screen and (min-width: 1024px) {
   button {
     color: #FFFFFF;
-    background-color: #065241;
+    background-color: #4056A1;
   }
 
   #new-tweet-form {

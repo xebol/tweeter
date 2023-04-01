@@ -44,7 +44,7 @@ main {
     width: 90%;
     margin: 0 auto;
     padding-top: 10em;
-    background-color: mintcream;
+    background-color: transparent;
   }
 
   .header {
@@ -55,14 +55,7 @@ main {
     margin: 90px;
     margin-top: 0px;
     margin-left: 150px;
-    background-color: mintcream;
+    background-color: transparent;
   }
 
-  body {
-    background-color: mintcream;
-  }
-
-  article.tweet {
-    background-color: mintcream;
-  }
 }

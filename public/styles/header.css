@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #aecaca;
+  background-color: #cfaa0b;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
@@ -35,6 +35,6 @@ header h2 {
     padding-top: 20px;
     width: 50%;
     height: 50%;
-    background-color: rgb(177, 208, 188);
+    background-color: #cfaa0b;
   }
 }
